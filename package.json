@@ -4,6 +4,12 @@
   "description": "MemberShip Front Core Project",
   "author": "Max <tnalsl1984@naver.com>",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "localhost",
+      "port": "3333"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -13,7 +19,15 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "animsition": "^4.0.2",
+    "bootstrap": "^4.1.3",
+    "daterangepicker": "^3.0.3",
+    "font-awesome": "^4.7.0",
+    "hamburgers": "^1.1.3",
+    "jquery": "^3.3.1",
+    "material-design-iconic-font": "^2.2.0",
+    "nuxt": "^2.0.0",
+    "select2": "^4.0.6-rc.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

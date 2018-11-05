@@ -1,5 +1,7 @@
+const webpack = require('webpack');
+
 module.exports = {
-  srcDir: '/src',
+  srcDir: 'src/',
 
   /*
   ** Headers of the page
@@ -13,12 +15,21 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: 'MemberShip Front Core Project'
-      }
+      },
+      {property: 'og:url', content: 'https://www.localhost.co.kr'},
+      {property: 'og:title', content: '타이틀'},
+      // { property: 'og:image', content: ''},
+      {property: 'og:description', content: ''},
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
+  css: [
+    '~/static/css/animate/animate.css',
+    '~/static/css/main.css',
+    '~/static/css/util.css',
+  ],
 
   /*
   ** Customize the progress bar color
@@ -42,7 +53,17 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['jquery', 'bootstrap', '~/plugins/plugins.js'],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        // '_': 'lodash'
+        // ...etc.
+      })
+    ]
   }
-}
+};
 
